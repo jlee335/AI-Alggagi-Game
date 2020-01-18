@@ -90,10 +90,9 @@ public class TennisAgent : Agent
 
     public override void AgentReset()
     {
-        m_InvertMult = invertX ? -1f : 1f;
-
-        transform.position = new Vector3(-m_InvertMult * Random.Range(6f, 8f), -1.5f, -3.5f) + transform.parent.transform.position;
-        m_AgentRb.velocity = new Vector3(0f, 0f, 0f);
+        // 모든 알들을 Reset하자. 
+        // 자기 색상의 돌들을 자기 앞에 두는 것.
+        
 
         SetResetParameters();
     }
